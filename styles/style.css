@@ -4,9 +4,7 @@
   box-sizing: border-box;
 }
 
-html {
-  block-size: 100%;
-}
+
 
 .page {
   inline-size: 1200px;
@@ -37,7 +35,7 @@ ol {
   list-style: none;
 }
 
-/* .visually-hidden {
+.visually-hidden {
   position: absolute;
   inline-size: 1px;
   block-size: 1px;
@@ -45,18 +43,30 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
-} */
+}
 
 fieldset {
   border: none;
 }
 
 
+.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  gap: 30px;
+  margin: 135px 30px;
+}
+
+
+
+/* !не забыть добавить всем шрифтам Arial, sans serif */
 /* основной блок */
 .result {
 display: flex;
 flex-direction: column;
 justify-content: flex-end;
+gap: 16px;
 }
 
 .result__video-container {
@@ -76,43 +86,27 @@ height: 100%;
 }
 
 .search-form {
-  display: grid;
-  grid-template-columns: 2fr 2fr 1fr;
-  width: 711px;
-  height: 54px; 
-  padding-top: 16px;
+display: flex;
+justify-content: space-between;
 
-  /* align-items: end; */
+/* margin-top: 16px; */
 }
 
 
 
-/* ! разобраться с кнопкой */
-/* .www {
-  display: grid;
-  align-items: end;
-} */
 
-.search-form__label {
-  width: fit-content;
-}
 
 .search-form__fieldset-title {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin-bottom: 5px;
 }
 
 /* контент */
 
-.content {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  justify-content: center;
-  gap: 30px;
-  margin: 133px 30px;
-}
+
 
 .title {
   font-family: Oswald;
@@ -153,6 +147,7 @@ height: 298px;
 /* .content__list-item  {
   padding-bottom: 30px;
 } */
+
 .content__card-link {
 text-decoration: none;
 color: #FFF;
@@ -208,6 +203,7 @@ padding-bottom: 6px;
 .search-form__submit-button {
   width: 194px;
   height: 34px;
+  align-self: flex-end;
 }
 
 
@@ -215,3 +211,89 @@ padding-bottom: 6px;
 width: 100%;
 min-height: 34px;
 }
+
+
+/* стилизация поля ввода */
+
+
+
+
+.search-form__textfield {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: inherit;
+  width: 225px;
+  border: none;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  background-color: rgba(27,25,25,0);
+}
+
+/* стилизация чекбоксов */
+
+.search-form__checkbox {
+
+}
+
+
+/* выравнивание чекбоксов */
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  position: relative;
+  inset: 0px;
+  border: 1px solid #FFF;
+  width: 19px;
+  height: 19px;
+  margin-right: 5px;
+
+}
+
+
+
+
+/* текст возле флажков */
+.search-form__label-text {
+
+}
+
+
+
+
+/* выравнивание */
+.search-form__label {
+  display: flex;
+  width: fit-content;
+}
+
+/* активный чекбокс */
+
+
+/* стилизация чекбокса */
+input[type="checkbox"]:checked ~ .search-form__pseudo-checkbox::before {
+content: "";
+background-color: #FFF;
+position: absolute;
+inset: 1px;
+}
+
+
+
+
+
+/* выключенный */
+input[type="checkbox"]:disabled + span{
+
+}
+
+/* в фокусе */
+input[type="checkbox"]:focus-visible {
+
+}
+
