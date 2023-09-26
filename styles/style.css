@@ -4,9 +4,12 @@
   box-sizing: border-box;
 }
 
-
+html {
+  width: 100%;
+}
 
 .page {
+  border: rgb(255, 0, 0) solid 1px;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -51,11 +54,12 @@ fieldset {
 
 
 .content {
+  border: rgb(255, 0, 0) solid 1px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   justify-content: center;
   gap: 30px;
-  margin: 135px 30px;
+  /* margin: 135px 30px; */
 }
 
 
