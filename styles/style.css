@@ -72,9 +72,6 @@ fieldset {
 }
 /* ! исправить прикол с  absolute */
 /* ! прикол с текстовым полем при активе */
-/* ! не забыть пофиксить размер видео */
-/* ! не забыть пофиксить размер карточек */
-/* !не забыть добавить всем шрифтам Arial, sans-serif */
 /* основной блок */
 .result {
   /* border: rgb(230, 0, 255) dashed 1px; */
@@ -146,14 +143,9 @@ fieldset {
   outline-offset: 1px;
 }
 
-/* .search-form__textfield:hover {
+.search-form__textfield:hover {
   cursor: text;
-} */
-
-/* .search-form__label:has(.search-form__label-text):hover {
-  cursor: pointer;
-  text-decoration: underline;
-} */
+}
 
 .search-form__textfield:active {
   border: none;
@@ -193,7 +185,7 @@ fieldset {
 input[type="checkbox"]:checked ~ .search-form__pseudo-checkbox::before {
   content: "";
   background-color: #fff;
-  position: absolute;
+  /* position: absolute; */
   inset: 1px;
 }
 
