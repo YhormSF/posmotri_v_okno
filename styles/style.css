@@ -13,8 +13,6 @@ html {
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  outline: rgb(255, 0, 0) solid 1px;
-
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -43,22 +41,11 @@ ol {
   list-style: none;
 }
 
-.visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
-
 fieldset {
   border: none;
 }
 
 .content {
-  outline: rgb(255, 0, 0) solid 1px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   justify-content: center;
@@ -94,15 +81,12 @@ fieldset {
   margin-top: -10px;
   width: 100%;
   height: 100%;
-  outline: #00ff6e dashed 1px;
 }
 
 /* поле ввода */
 .search-form {
   display: flex;
   justify-content: space-between;
-  outline: rgb(255, 0, 0) solid 1px;
-  /* margin-top: 16px; */
 }
 
 .search-form__fieldset {
@@ -185,7 +169,7 @@ fieldset {
 input[type="checkbox"]:checked ~ .search-form__pseudo-checkbox::before {
   content: "";
   background-color: #fff;
-  /* position: absolute; */
+  position: absolute;
   inset: 1px;
 }
 
@@ -286,6 +270,7 @@ input[type="checkbox"]:checked ~ .search-form__pseudo-checkbox::before {
   line-height: 90%;
 }
 
+/* фиксированный размер карточек-видео */
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
@@ -359,4 +344,15 @@ input[type="checkbox"]:checked ~ .search-form__pseudo-checkbox::before {
 
 .button:active {
   background-color: #545050;
+}
+
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
