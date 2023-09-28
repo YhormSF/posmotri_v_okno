@@ -203,7 +203,7 @@ fieldset {
 
 .content__details {
   display: grid;
-  gap: 24px; /* 26px */
+  gap: 26px; /* 26px */
 }
 
 .title {
