@@ -64,11 +64,6 @@ fieldset {
 
 }
 
-/* ! пофиксить фокус первой карточки и "показать еще" вне девтулза  */
-/* ! пофксить отступ между карточкой и скроллом */
-/* ! пофиксить расстояние "показать еще" после нажатия */
-
-
 /* основной блок */
 .result {
   display: flex;
@@ -146,8 +141,8 @@ fieldset {
 
 /* чекбосы */
 
-.search-form__checkbox {
-}
+/* .search-form__checkbox {
+} */
 
 /* выравнивание чекбоксов */
 .search-form__checkbox-list {
@@ -203,7 +198,7 @@ fieldset {
 
 .content__details {
   display: grid;
-  gap: 26px; /* 26px */
+  gap: 26px; 
 }
 
 .title {
@@ -229,14 +224,15 @@ fieldset {
 .content__list {
   display: grid;
   overflow: overlay;
-  gap: 30px;
   position: relative;
   inset: 0;
   height: 298px;
 }
 
-/* .content__list-item  {
-} */
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
 
 .content__card-link {
   display: block;
@@ -335,9 +331,14 @@ fieldset {
 }
 
 .more-button {
-  width: 100%;
+  width: 99%;
+  /* отступ для фокуса */
+  margin-left: 2px;
+  margin-bottom: 2px;
+
 }
 
+/* фокусы, ховеры и активы для кнопок*/
 .button:focus {
   outline: none;
 }
